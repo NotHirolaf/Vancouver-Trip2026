@@ -63,15 +63,33 @@ export default function Lightbox({ photo, onClose }: LightboxProps) {
                             <X size={18} />
                         </button>
 
-                        {/* Left: Image */}
+                        {/* Left: Image or Video */}
                         <div className="relative min-h-[250px] w-full flex-shrink-0 md:w-1/2">
-                            <motion.img
-                                src={photo.src}
-                                alt={photo.alt}
-                                className="h-full w-full object-cover"
-                                layoutId={`photo-image-${photo.id}`}
-                                transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
-                            />
+                            {photo.videoSrc ? (
+                                <motion.div
+                                    className="h-full w-full"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                    transition={{ delay: 0.2, duration: 0.4 }}
+                                >
+                                    <video
+                                        src={photo.videoSrc}
+                                        poster={photo.src}
+                                        controls
+                                        autoPlay
+                                        className="h-full w-full object-cover"
+                                        playsInline
+                                    />
+                                </motion.div>
+                            ) : (
+                                <motion.img
+                                    src={photo.src}
+                                    alt={photo.alt}
+                                    className="h-full w-full object-cover"
+                                    layoutId={`photo-image-${photo.id}`}
+                                    transition={{ duration: 0.5, ease: [0.32, 0.72, 0, 1] }}
+                                />
+                            )}
                         </div>
 
                         {/* Right: Journal Entry */}

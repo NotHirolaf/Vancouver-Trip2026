@@ -7,6 +7,7 @@ export interface PhotoEntry {
     rotation: number;
     date: string;
     section: "intro" | "nature" | "city" | "food";
+    videoSrc?: string; // Optional video URL — if present, lightbox will play this video
 }
 
 export const photos: PhotoEntry[] = [
@@ -56,6 +57,7 @@ export const photos: PhotoEntry[] = [
         rotation: 2.1,
         date: "July 15, 2026",
         section: "nature",
+        videoSrc: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
     },
     {
         id: "nature-2",

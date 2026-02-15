@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import { Play } from "lucide-react";
 import type { PhotoEntry } from "@/data/data";
 
 interface PhotoCardProps {
@@ -38,6 +39,15 @@ export default function PhotoCard({ photo, onSelect }: PhotoCardProps) {
 
                     {/* Subtle overlay on hover */}
                     <div className="absolute inset-0 bg-black/0 transition-colors duration-300 group-hover:bg-black/5" />
+
+                    {/* Video play icon — bottom right badge */}
+                    {photo.videoSrc && (
+                        <div className="absolute bottom-2 right-2">
+                            <div className="flex h-8 w-8 items-center justify-center rounded-full bg-black/50 text-white backdrop-blur-sm transition-transform duration-300 group-hover:scale-110">
+                                <Play size={14} className="ml-0.5" />
+                            </div>
+                        </div>
+                    )}
                 </div>
 
                 {/* Caption strip */}
