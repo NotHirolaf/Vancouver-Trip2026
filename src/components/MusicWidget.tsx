@@ -23,7 +23,7 @@ export default function MusicWidget() {
             transition={{ delay: 1.5, duration: 0.6, ease: "easeOut" }}
         >
             <motion.div
-                className="flex items-center gap-3 rounded-full border border-white/10 bg-forest-dark/90 px-4 py-2.5 shadow-lg backdrop-blur-md"
+                className="flex items-center gap-3 rounded-full border border-forest/15 bg-white/80 px-4 py-2.5 shadow-lg backdrop-blur-md"
                 layout
                 transition={{ duration: 0.3, ease: "easeInOut" }}
             >
@@ -48,10 +48,10 @@ export default function MusicWidget() {
                             {/* Marquee song title */}
                             <div className="w-36 overflow-hidden">
                                 <div className="animate-marquee whitespace-nowrap">
-                                    <span className="mr-8 text-sm text-cream/80">
+                                    <span className="mr-8 text-sm text-slate-grey">
                                         {MOCK_SONGS[currentSong]}
                                     </span>
-                                    <span className="mr-8 text-sm text-cream/80">
+                                    <span className="mr-8 text-sm text-slate-grey">
                                         {MOCK_SONGS[currentSong]}
                                     </span>
                                 </div>
@@ -86,7 +86,7 @@ export default function MusicWidget() {
                 {/* Play/Pause button */}
                 <button
                     onClick={() => setIsPlaying(!isPlaying)}
-                    className="flex h-8 w-8 items-center justify-center rounded-full bg-white/10 text-cream transition-colors hover:bg-white/20"
+                    className="flex h-8 w-8 items-center justify-center rounded-full bg-forest/10 text-forest transition-colors hover:bg-forest/20"
                     aria-label={isPlaying ? "Pause" : "Play"}
                 >
                     {isPlaying ? <Pause size={14} /> : <Play size={14} />}

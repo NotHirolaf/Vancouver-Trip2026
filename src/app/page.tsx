@@ -22,16 +22,16 @@ export default function HomePage() {
       {/* ── Landing Hero ─────────────────────────────────── */}
       <section className="relative flex min-h-screen flex-col items-center justify-center overflow-hidden px-6">
         {/* Background gradient */}
-        <div className="absolute inset-0 bg-gradient-to-b from-forest-dark via-forest to-forest-light" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#4a7c5e] via-[#5a9470] to-[#7ab893]" />
 
         {/* Floating decorative elements */}
         <motion.div
-          className="absolute left-[10%] top-[20%] h-64 w-64 rounded-full bg-ocean/5 blur-3xl"
+          className="absolute left-[10%] top-[20%] h-64 w-64 rounded-full bg-ocean/20 blur-3xl"
           animate={{ y: [0, -20, 0], x: [0, 10, 0] }}
           transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
         />
         <motion.div
-          className="absolute bottom-[20%] right-[15%] h-48 w-48 rounded-full bg-gold/5 blur-3xl"
+          className="absolute bottom-[20%] right-[15%] h-48 w-48 rounded-full bg-gold-bright/20 blur-3xl"
           animate={{ y: [0, 15, 0], x: [0, -10, 0] }}
           transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
         />
@@ -39,7 +39,7 @@ export default function HomePage() {
         {/* Content */}
         <div className="relative z-10 text-center">
           <motion.div
-            className="mb-6 flex items-center justify-center gap-2 text-gold/60"
+            className="mb-6 flex items-center justify-center gap-2 text-gold-bright"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.2 }}
@@ -67,7 +67,7 @@ export default function HomePage() {
           />
 
           <motion.p
-            className="mx-auto max-w-lg text-lg leading-relaxed text-cream/60 sm:text-xl"
+            className="mx-auto max-w-lg text-lg leading-relaxed text-white/80 sm:text-xl"
             initial={{ y: 20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -77,7 +77,7 @@ export default function HomePage() {
           </motion.p>
 
           <motion.div
-            className="mt-8 flex items-center justify-center gap-1.5 text-cream/40"
+            className="mt-8 flex items-center justify-center gap-1.5 text-white/60"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.2 }}
@@ -97,7 +97,7 @@ export default function HomePage() {
           initial={{ opacity: 0 }}
         >
           <motion.div
-            className="h-8 w-5 rounded-full border-2 border-cream/20"
+            className="h-8 w-5 rounded-full border-2 border-white/40"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.5 }}
@@ -115,9 +115,9 @@ export default function HomePage() {
       <ParallaxHero
         title={sections.intro.title}
         subtitle={sections.intro.subtitle}
-        bgFrom="#2d3748"
-        bgTo="#1a2f23"
-        accent="#4299e1"
+        bgFrom="#5b8fa8"
+        bgTo="#7ab893"
+        accent="#63c5ed"
       />
       <MasonryGrid
         photos={introPhotos}
@@ -131,9 +131,9 @@ export default function HomePage() {
       <ParallaxHero
         title={sections.nature.title}
         subtitle={sections.nature.subtitle}
-        bgFrom="#1a2f23"
-        bgTo="#0f3d2e"
-        accent="#98d4a0"
+        bgFrom="#5a9470"
+        bgTo="#7cc49a"
+        accent="#a8e6b8"
       />
       <MasonryGrid
         photos={naturePhotos}
@@ -147,9 +147,9 @@ export default function HomePage() {
       <ParallaxHero
         title={sections.city.title}
         subtitle={sections.city.subtitle}
-        bgFrom="#1a1a2e"
-        bgTo="#2d3748"
-        accent="#f6ad55"
+        bgFrom="#5a7a94"
+        bgTo="#7ba0bc"
+        accent="#fbc95e"
       />
       <MasonryGrid
         photos={cityPhotos}
@@ -163,8 +163,8 @@ export default function HomePage() {
       <ParallaxHero
         title={sections.food.title}
         subtitle={sections.food.subtitle}
-        bgFrom="#3d2008"
-        bgTo="#1a2f23"
+        bgFrom="#d4956b"
+        bgTo="#e8b88a"
         accent="#fbd38d"
       />
       <MasonryGrid
@@ -183,10 +183,10 @@ export default function HomePage() {
           transition={{ duration: 1 }}
           viewport={{ once: true }}
         >
-          <p className="font-hand text-3xl text-gold/60 sm:text-4xl">
+          <p className="font-hand text-3xl text-forest sm:text-4xl">
             Until next time, Vancouver.
           </p>
-          <p className="mt-3 text-xs tracking-widest text-cream/30 uppercase">
+          <p className="mt-3 text-xs tracking-widest text-slate-grey/50 uppercase">
             Summer 2026 — A journey documented
           </p>
         </motion.div>

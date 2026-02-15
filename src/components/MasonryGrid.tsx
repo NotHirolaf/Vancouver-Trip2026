@@ -31,11 +31,11 @@ export default function MasonryGrid({
                 transition={{ duration: 0.7, ease: "easeOut" }}
                 viewport={{ once: true, margin: "-100px" }}
             >
-                <h2 className="font-hand text-4xl tracking-wide text-gold sm:text-5xl md:text-6xl">
+                <h2 className="font-hand text-4xl tracking-wide text-forest sm:text-5xl md:text-6xl">
                     {sectionTitle}
                 </h2>
-                <div className="mx-auto my-3 h-[1px] w-20 bg-gold/30" />
-                <p className="text-sm tracking-widest text-cream/50 uppercase">
+                <div className="mx-auto my-3 h-[1px] w-20 bg-forest/30" />
+                <p className="text-sm tracking-widest text-slate-grey/60 uppercase">
                     {sectionSubtitle}
                 </p>
             </motion.div>
