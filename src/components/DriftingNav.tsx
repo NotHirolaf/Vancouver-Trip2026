@@ -8,10 +8,10 @@ const SECTION_KEYS = Object.keys(sections) as Array<keyof typeof sections>;
 
 /* ── Section accent colours for active dot ───────────────── */
 const SECTION_COLORS: Record<string, string> = {
-    intro: "#63c5ed",
+    intro: "#4fbdba",
     nature: "#7cc49a",
     aquarium: "#63c5ed",
-    city: "#fbc95e",
+    city: "#8b9cc7",
     food: "#f6a623",
 };
 

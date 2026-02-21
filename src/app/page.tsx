@@ -172,9 +172,9 @@ export default function HomePage() {
         <ParallaxHero
           title={sections.city.title}
           subtitle={sections.city.subtitle}
-          bgFrom="#5a7a94"
-          bgTo="#7ba0bc"
-          accent="#fbc95e"
+          bgFrom="#2d3148"
+          bgTo="#4a5578"
+          accent="#f6ad55"
         />
         <MasonryGrid
           photos={cityPhotos}
