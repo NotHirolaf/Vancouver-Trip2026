@@ -7,6 +7,7 @@ import ParallaxHero from "@/components/ParallaxHero";
 import MasonryGrid from "@/components/MasonryGrid";
 import Lightbox from "@/components/Lightbox";
 import MusicWidget from "@/components/MusicWidget";
+import DriftingNav from "@/components/DriftingNav";
 import { getPhotosBySection, sections, type PhotoEntry } from "@/data/data";
 
 export default function HomePage() {
@@ -112,68 +113,76 @@ export default function HomePage() {
       </section>
 
       {/* ── Intro Section ────────────────────────────────── */}
-      <ParallaxHero
-        title={sections.intro.title}
-        subtitle={sections.intro.subtitle}
-        bgFrom="#5b8fa8"
-        bgTo="#7ab893"
-        accent="#63c5ed"
-      />
-      <MasonryGrid
-        photos={introPhotos}
-        sectionTitle={sections.intro.title}
-        sectionSubtitle={sections.intro.subtitle}
-        sectionKey="intro"
-        onSelectPhoto={setSelectedPhoto}
-      />
+      <div id="section-intro">
+        <ParallaxHero
+          title={sections.intro.title}
+          subtitle={sections.intro.subtitle}
+          bgFrom="#5b8fa8"
+          bgTo="#7ab893"
+          accent="#63c5ed"
+        />
+        <MasonryGrid
+          photos={introPhotos}
+          sectionTitle={sections.intro.title}
+          sectionSubtitle={sections.intro.subtitle}
+          sectionKey="intro"
+          onSelectPhoto={setSelectedPhoto}
+        />
+      </div>
 
       {/* ── Nature Section ───────────────────────────────── */}
-      <ParallaxHero
-        title={sections.nature.title}
-        subtitle={sections.nature.subtitle}
-        bgFrom="#5a9470"
-        bgTo="#7cc49a"
-        accent="#a8e6b8"
-      />
-      <MasonryGrid
-        photos={naturePhotos}
-        sectionTitle={sections.nature.title}
-        sectionSubtitle={sections.nature.subtitle}
-        sectionKey="nature"
-        onSelectPhoto={setSelectedPhoto}
-      />
+      <div id="section-nature">
+        <ParallaxHero
+          title={sections.nature.title}
+          subtitle={sections.nature.subtitle}
+          bgFrom="#5a9470"
+          bgTo="#7cc49a"
+          accent="#a8e6b8"
+        />
+        <MasonryGrid
+          photos={naturePhotos}
+          sectionTitle={sections.nature.title}
+          sectionSubtitle={sections.nature.subtitle}
+          sectionKey="nature"
+          onSelectPhoto={setSelectedPhoto}
+        />
+      </div>
 
       {/* ── City Section ─────────────────────────────────── */}
-      <ParallaxHero
-        title={sections.city.title}
-        subtitle={sections.city.subtitle}
-        bgFrom="#5a7a94"
-        bgTo="#7ba0bc"
-        accent="#fbc95e"
-      />
-      <MasonryGrid
-        photos={cityPhotos}
-        sectionTitle={sections.city.title}
-        sectionSubtitle={sections.city.subtitle}
-        sectionKey="city"
-        onSelectPhoto={setSelectedPhoto}
-      />
+      <div id="section-city">
+        <ParallaxHero
+          title={sections.city.title}
+          subtitle={sections.city.subtitle}
+          bgFrom="#5a7a94"
+          bgTo="#7ba0bc"
+          accent="#fbc95e"
+        />
+        <MasonryGrid
+          photos={cityPhotos}
+          sectionTitle={sections.city.title}
+          sectionSubtitle={sections.city.subtitle}
+          sectionKey="city"
+          onSelectPhoto={setSelectedPhoto}
+        />
+      </div>
 
       {/* ── Food Section ─────────────────────────────────── */}
-      <ParallaxHero
-        title={sections.food.title}
-        subtitle={sections.food.subtitle}
-        bgFrom="#d4956b"
-        bgTo="#e8b88a"
-        accent="#fbd38d"
-      />
-      <MasonryGrid
-        photos={foodPhotos}
-        sectionTitle={sections.food.title}
-        sectionSubtitle={sections.food.subtitle}
-        sectionKey="food"
-        onSelectPhoto={setSelectedPhoto}
-      />
+      <div id="section-food">
+        <ParallaxHero
+          title={sections.food.title}
+          subtitle={sections.food.subtitle}
+          bgFrom="#d4956b"
+          bgTo="#e8b88a"
+          accent="#fbd38d"
+        />
+        <MasonryGrid
+          photos={foodPhotos}
+          sectionTitle={sections.food.title}
+          sectionSubtitle={sections.food.subtitle}
+          sectionKey="food"
+          onSelectPhoto={setSelectedPhoto}
+        />
+      </div>
 
       {/* ── Footer ───────────────────────────────────────── */}
       <footer className="relative py-20 text-center">
@@ -195,6 +204,7 @@ export default function HomePage() {
       {/* ── Global Overlays ──────────────────────────────── */}
       <Lightbox photo={selectedPhoto} onClose={() => setSelectedPhoto(null)} />
       <MusicWidget />
+      <DriftingNav />
     </main>
   );
 }
