@@ -103,6 +103,11 @@ body {
   --section-glow: rgba(61, 107, 79, 0.12);
 }
 
+.section-aquarium {
+  --section-accent: var(--color-ocean);
+  --section-glow: rgba(56, 163, 232, 0.12);
+}
+
 .section-city {
   --section-accent: var(--color-slate-grey);
   --section-glow: rgba(56, 163, 232, 0.1);

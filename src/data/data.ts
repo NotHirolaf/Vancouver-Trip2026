@@ -6,7 +6,7 @@ export interface PhotoEntry {
     journalEntry: string;
     rotation: number;
     date: string;
-    section: "intro" | "nature" | "city" | "food";
+    section: "intro" | "nature" | "city" | "food" | "aquarium";
     videoSrc?: string; // Optional video URL — if present, lightbox will play this video
 }
 
@@ -46,14 +46,14 @@ export const photos: PhotoEntry[] = [
         section: "intro",
     },
 
-    // ── Nature: "Stanley Park & The Seawall" ───────────────
+    // ── Nature: "Into the Wild" ─────────────────────────────
     {
         id: "nature-1",
-        src: "https://placehold.co/700x900/1a2f23/98d4a0?text=Seawall+Trail",
-        alt: "Seawall cycling path",
-        caption: "The Seawall at sunrise",
+        src: "https://placehold.co/700x900/1a2f23/98d4a0?text=Lynn+Canyon",
+        alt: "Suspension bridge over Lynn Canyon",
+        caption: "Crossing Lynn Canyon",
         journalEntry:
-            "We rented bikes and hit the Seawall before the crowds. The morning mist was still clinging to the water, and the only sounds were our tires on the path and distant foghorns. Passed a row of totem poles standing silent and tall against the grey sky. Everything felt ancient and peaceful.",
+            "The suspension bridge at Lynn Canyon swayed with every step, the turquoise creek roaring thirty metres below. Unlike Capilano, this one's free — and somehow more thrilling. We hiked the loop trail afterwards, surrounded by old-growth Douglas firs so tall they blurred into the mist above.",
         rotation: 2.1,
         date: "July 15, 2026",
         section: "nature",
@@ -61,36 +61,82 @@ export const photos: PhotoEntry[] = [
     },
     {
         id: "nature-2",
-        src: "https://placehold.co/600x800/2d5016/c6f6d5?text=Totem+Poles",
-        alt: "Totem poles in Stanley Park",
-        caption: "Standing with giants",
+        src: "https://placehold.co/600x800/2d5016/c6f6d5?text=Capilano",
+        alt: "Towering trees in Capilano River Regional Park",
+        caption: "Cathedral of trees",
         journalEntry:
-            "The totem poles at Brockton Point are breathtaking up close. Each one tells a different story — eagles, bears, thunderbirds carved in red cedar. There's a quiet reverence to the place. We spent twenty minutes just reading the plaques and trying to understand the narratives in the carvings.",
+            "Walking through Capilano felt like stepping into another century. The canopy was so dense the light barely reached the forest floor — just these golden shafts cutting through the green. Ferns everywhere, the smell of wet earth and cedar. We barely spoke the whole hike. Didn't need to.",
         rotation: -2.8,
         date: "July 15, 2026",
         section: "nature",
     },
     {
         id: "nature-3",
-        src: "https://placehold.co/800x600/0f3d2e/88d8b0?text=Third+Beach",
-        alt: "Driftwood on Third Beach",
-        caption: "Driftwood & daydreams",
+        src: "https://placehold.co/800x600/0f3d2e/88d8b0?text=Lighthouse+Park",
+        alt: "Rocky shoreline at Lighthouse Park",
+        caption: "Edge of the continent",
         journalEntry:
-            "Third Beach was our favorite discovery. Massive pieces of driftwood scattered on the sand like a natural sculpture garden. We sat on one of the logs and ate granola bars, watching kayakers paddle out toward the open water. A bald eagle circled overhead. I'm not making this up.",
+            "Lighthouse Park in West Van felt like the edge of the world. We scrambled over massive granite boulders to reach the shore, where waves crashed against rock smoothed by centuries of Pacific storms. The Atkinson Lighthouse stood white against the grey sky. A bald eagle watched us from a dead snag. Classic BC.",
         rotation: 1.5,
         date: "July 15, 2026",
         section: "nature",
     },
     {
         id: "nature-4",
-        src: "https://placehold.co/600x750/1a3a2a/a0d2b0?text=Prospect+Point",
-        alt: "Lions Gate Bridge from Prospect Point",
-        caption: "Prospect Point lookout",
+        src: "https://placehold.co/600x750/1a3a2a/a0d2b0?text=Deep+Cove",
+        alt: "Kayaks on the water at Deep Cove",
+        caption: "Deep Cove golden hour",
         journalEntry:
-            "The view from Prospect Point is the kind that makes you go quiet. Lions Gate Bridge stretching across the inlet, tankers anchored in the distance, and the mountains beyond. We got ice cream from the concession stand and watched a raccoon family waddle across the path. Peak Pacific Northwest.",
+            "We drove out to Deep Cove for sunset and it was worth every minute of traffic. The inlet was mirror-still, reflecting the mountains in perfect symmetry. Kayakers glided across the water leaving tiny ripples. We grabbed honey doughnuts from the famous bakery and ate them on the dock, feet dangling over the water.",
         rotation: -1.0,
         date: "July 15, 2026",
         section: "nature",
+    },
+
+    // ── Aquarium: "The Aquarium" ───────────────────────────
+    {
+        id: "aquarium-1",
+        src: "https://placehold.co/600x800/1a3a5c/63c5ed?text=Jellyfish",
+        alt: "Glowing jellyfish exhibit",
+        caption: "Cosmic jellyfish 🪼",
+        journalEntry:
+            "The jellyfish gallery was pure magic. Moon jellies drifting in slow circles, lit by shifting blues and purples — it felt like floating through outer space. We stood there hypnotized for way too long. The kind of exhibit that makes you forget there's a world outside the glass.",
+        rotation: -1.5,
+        date: "July 15, 2026",
+        section: "aquarium",
+    },
+    {
+        id: "aquarium-2",
+        src: "https://placehold.co/800x600/0f3d5e/e8d4a0?text=Sea+Otters",
+        alt: "Sea otters floating on their backs",
+        caption: "Otters being otters",
+        journalEntry:
+            "The sea otters stole the show. Two of them were floating on their backs, holding hands so they wouldn't drift apart — yes, they actually do that. One kept rolling over to groom itself, then flipping back with the most unbothered expression. We could have watched them all day.",
+        rotation: 2.3,
+        date: "July 15, 2026",
+        section: "aquarium",
+    },
+    {
+        id: "aquarium-3",
+        src: "https://placehold.co/700x900/1a3a5c/b8d8e8?text=Beluga",
+        alt: "Beluga whale swimming past the viewing window",
+        caption: "A beluga hello",
+        journalEntry:
+            "A beluga whale swam right up to the viewing window and just... looked at us. Eye to eye, no rush, like it was studying us the way we were studying it. Its skin was this impossible shade of white against the deep blue water. The kids next to us screamed with joy. Honestly, so did we.",
+        rotation: -2.0,
+        date: "July 15, 2026",
+        section: "aquarium",
+    },
+    {
+        id: "aquarium-4",
+        src: "https://placehold.co/600x750/2d6a8a/fefcf7?text=Touch+Pool",
+        alt: "Touching starfish in the tidal pool exhibit",
+        caption: "Starfish handshake 🌊",
+        journalEntry:
+            "The touch pool was weirdly one of the highlights. Sea stars, anemones, sea cucumbers — all just sitting there, letting you gently poke them. The texture of a sea star is nothing like what you'd expect — rough, almost like sandpaper. A docent explained how they regenerate lost arms. Nature is wild.",
+        rotation: 1.0,
+        date: "July 15, 2026",
+        section: "aquarium",
     },
 
     // ── City: "Gastown & Downtown" ─────────────────────────
@@ -193,9 +239,14 @@ export const sections = {
         theme: "slate" as const,
     },
     nature: {
-        title: "Stanley Park & The Seawall",
-        subtitle: "Where the forest meets the ocean",
+        title: "Into the Wild",
+        subtitle: "Rainforest trails, canyon crossings & coastal wanders",
         theme: "forest" as const,
+    },
+    aquarium: {
+        title: "The Aquarium",
+        subtitle: "Jellyfish, sea otters & ocean wonder",
+        theme: "deep" as const,
     },
     city: {
         title: "Gastown & Downtown",

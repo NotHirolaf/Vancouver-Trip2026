@@ -15,6 +15,7 @@ export default function HomePage() {
 
   const introPhotos = getPhotosBySection("intro");
   const naturePhotos = getPhotosBySection("nature");
+  const aquariumPhotos = getPhotosBySection("aquarium");
   const cityPhotos = getPhotosBySection("city");
   const foodPhotos = getPhotosBySection("food");
 
@@ -144,6 +145,24 @@ export default function HomePage() {
           sectionTitle={sections.nature.title}
           sectionSubtitle={sections.nature.subtitle}
           sectionKey="nature"
+          onSelectPhoto={setSelectedPhoto}
+        />
+      </div>
+
+      {/* ── Aquarium Section ──────────────────────────────── */}
+      <div id="section-aquarium">
+        <ParallaxHero
+          title={sections.aquarium.title}
+          subtitle={sections.aquarium.subtitle}
+          bgFrom="#1a3a5c"
+          bgTo="#2d6a8a"
+          accent="#63c5ed"
+        />
+        <MasonryGrid
+          photos={aquariumPhotos}
+          sectionTitle={sections.aquarium.title}
+          sectionSubtitle={sections.aquarium.subtitle}
+          sectionKey="aquarium"
           onSelectPhoto={setSelectedPhoto}
         />
       </div>

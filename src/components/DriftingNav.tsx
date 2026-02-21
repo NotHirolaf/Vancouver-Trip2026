@@ -10,6 +10,7 @@ const SECTION_KEYS = Object.keys(sections) as Array<keyof typeof sections>;
 const SECTION_COLORS: Record<string, string> = {
     intro: "#63c5ed",
     nature: "#7cc49a",
+    aquarium: "#63c5ed",
     city: "#fbc95e",
     food: "#f6a623",
 };
