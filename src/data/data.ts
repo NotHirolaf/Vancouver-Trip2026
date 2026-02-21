@@ -216,7 +216,7 @@ export const photos: PhotoEntry[] = [
 export const sections = {
     intro: {
         title: "Touchdown in YVR",
-        subtitle: "July 2026 — The adventure begins",
+        subtitle: "February 2026 — The adventure begins",
         theme: "slate" as const,
     },
     nature: {
