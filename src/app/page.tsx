@@ -215,7 +215,7 @@ export default function HomePage() {
             Until next time, Vancouver.
           </p>
           <p className="mt-3 text-xs tracking-widest text-slate-grey/50 uppercase">
-            Summer 2026 — A journey documented
+            February 2026 — A journey documented
           </p>
         </motion.div>
       </footer>
