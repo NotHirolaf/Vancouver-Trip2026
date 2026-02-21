@@ -9,6 +9,7 @@ interface ParallaxHeroProps {
     bgFrom: string;
     bgTo: string;
     accent?: string;
+    textColor?: string;
 }
 
 export default function ParallaxHero({
@@ -17,6 +18,7 @@ export default function ParallaxHero({
     bgFrom,
     bgTo,
     accent = "#f6ad55",
+    textColor,
 }: ParallaxHeroProps) {
     const ref = useRef<HTMLDivElement>(null);
 
@@ -74,7 +76,8 @@ export default function ParallaxHero({
                 style={{ opacity, scale }}
             >
                 <motion.h2
-                    className="font-hand text-5xl leading-tight tracking-wide text-white sm:text-6xl md:text-7xl lg:text-8xl"
+                    className="font-hand text-5xl leading-tight tracking-wide sm:text-6xl md:text-7xl lg:text-8xl"
+                    style={{ textShadow: "0 2px 12px rgba(0,0,0,0.25)", color: textColor ?? "#ffffff" }}
                     initial={{ y: 30, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.8, ease: "easeOut" }}
@@ -94,7 +97,8 @@ export default function ParallaxHero({
                 />
 
                 <motion.p
-                    className="max-w-md text-lg tracking-wide text-white/70 sm:text-xl"
+                    className="max-w-md text-lg tracking-wide sm:text-xl"
+                    style={{ textShadow: "0 1px 8px rgba(0,0,0,0.2)", color: textColor ?? "#ffffff" }}
                     initial={{ y: 20, opacity: 0 }}
                     whileInView={{ y: 0, opacity: 1 }}
                     transition={{ duration: 0.6, delay: 0.4 }}

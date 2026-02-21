@@ -48,7 +48,7 @@ export default function HomePage() {
           >
             <Plane size={16} className="rotate-[-30deg]" />
             <span className="text-sm tracking-[0.3em] uppercase">
-              Summer 2026
+              February 2026
             </span>
           </motion.div>
 
@@ -118,9 +118,10 @@ export default function HomePage() {
         <ParallaxHero
           title={sections.intro.title}
           subtitle={sections.intro.subtitle}
-          bgFrom="#5b8fa8"
-          bgTo="#7ab893"
+          bgFrom="#4a7e97"
+          bgTo="#6aa882"
           accent="#63c5ed"
+          textColor="#ffffff"
         />
         <MasonryGrid
           photos={introPhotos}
@@ -193,6 +194,7 @@ export default function HomePage() {
           bgFrom="#d4956b"
           bgTo="#e8b88a"
           accent="#fbd38d"
+          textColor="#ffffff"
         />
         <MasonryGrid
           photos={foodPhotos}
